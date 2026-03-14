@@ -5,6 +5,8 @@ import com.chaha.flashcards.model.Flashcard;
 import com.chaha.flashcards.service.FlashcardService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
+import com.chaha.flashcards.dto.SubmitAnswerRequest;
+import com.chaha.flashcards.dto.SubmitAnswerResponse;
 
 import java.util.List;
 
@@ -32,5 +34,13 @@ public class FlashcardController {
     @GetMapping("/{id}")
     public Flashcard getFlashcardById(@PathVariable Long id) {
         return flashcardService.getFlashcardById(id);
+    }
+
+    @PostMapping("/{id}/answer")
+    public SubmitAnswerResponse submitAnswer(
+            @PathVariable Long id,
+            @Valid @RequestBody SubmitAnswerRequest request
+    ) {
+        return flashcardService.submitAnswer(id, request);
     }
 }
