@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.panel {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); 
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 16px;
+    margin-top: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.flashcard {
+    background: #eef3ff;
+    border: 1px solid #ccd8ff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hidden {
+  display: none;
+}
+
+#study-feedback,
+#create-message {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+ul {
+  padding-left: 20px;
+}
+

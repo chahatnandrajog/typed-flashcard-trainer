@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typed Flashcard Trainer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Typed Flashcard Trainer</h1>
+
+        <section class="panel">
+            <h2>Create Flashcard</h2>
+            <form id="flashcard-form">
+                <label for="question">Question</label>
+                <input type="text" id="question" name="question" required />
+
+                <label for="answer">Answer</label>
+                <input type="text" id="answer" name="answer" required />
+
+                <button type="submit">Save Flashcard</button>
+            </form>
+
+            <p id="create-message"></p>
+        </section>
+
+        <section class="panel">
+            <h2>Study Session</h2>
+            <button id="start-session-btn">Start Study Session</button>
+
+            <div id="study-area" class="hidden">
+                <div class="flashcard">
+                    <p id="study-question">Question will appear here</p>
+                </div>
+
+                <label for="study-answer">Your Answer</label>
+                <input type="text" id="study-answer" />
+
+                <button id ="submit-answer-btn">Submit Answer</button>
+                <button id="next-card-btn" class="hidden">Next Card</button>
+
+                <p id="study-feedback"></p>
+            </div> 
+        </section>
+
+        <section class="panel">
+            <h2>Analytics</h2>
+            <button id="load-analytics-btn">Load Analytics</button>
+
+            <div id="analytics-area" class="hidden">
+                <div id="analytics-summary"></div>
+
+                <h3>Hardest Flashcards</h3>
+                <ul id="hardest-cards-list"></ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
