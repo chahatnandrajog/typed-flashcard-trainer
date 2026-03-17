@@ -77,6 +77,10 @@ public class StudySessionService {
             queue.offer(currentCard);
         }
         
+        System.out.println("Answered card ID: " + currentCard.getId() + ", correct=" + isCorrect);
+        System.out.println("Queue now contains IDs: " +
+                queue.stream().map(card -> card.getId().toString()).toList());
+
         flashcardRepository.save(currentCard);
 
         return new SubmitSessionAnswerResponse(
